@@ -149,7 +149,7 @@ export interface Page {
   id: string;
   title: string;
   hero: {
-    type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact';
+    type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact' | 'kushotoHero';
     richText?: {
       root: {
         type: string;
@@ -190,6 +190,7 @@ export interface Page {
         }[]
       | null;
     media?: (string | null) | Media;
+    youtubeURL?: string | null;
   };
   layout: (CallToActionBlock | ContentBlock | MediaBlock | ArchiveBlock | FormBlock)[];
   meta?: {
@@ -1008,6 +1009,7 @@ export interface PagesSelect<T extends boolean = true> {
               id?: T;
             };
         media?: T;
+        youtubeURL?: T;
       };
   layout?:
     | T

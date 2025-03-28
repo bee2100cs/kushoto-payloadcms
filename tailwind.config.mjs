@@ -116,6 +116,7 @@ const config = {
               h1: {
                 fontWeight: 'normal',
                 marginBottom: '0.25em',
+                color: '#FF5800',
               },
             },
           ],
@@ -125,6 +126,7 @@ const config = {
             {
               h1: {
                 fontSize: '2.5rem',
+                color: '#ff5800',
               },
               h2: {
                 fontSize: '1.25rem',
@@ -138,6 +140,7 @@ const config = {
             {
               h1: {
                 fontSize: '3.5rem',
+                color: '#ff5800',
               },
               h2: {
                 fontSize: '1.5rem',

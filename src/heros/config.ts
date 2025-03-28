@@ -35,6 +35,10 @@ export const hero: Field = {
           label: 'Low Impact',
           value: 'lowImpact',
         },
+        {
+          label: 'Kushoto Hero',
+          value: 'kushotoHero',
+        },
       ],
       required: true,
     },
@@ -62,10 +66,19 @@ export const hero: Field = {
       name: 'media',
       type: 'upload',
       admin: {
-        condition: (_, { type } = {}) => ['highImpact', 'mediumImpact'].includes(type),
+        condition: (_, { type } = {}) =>
+          ['highImpact', 'mediumImpact', 'kushotoHero'].includes(type),
       },
       relationTo: 'media',
       required: true,
+    },
+    {
+      name: 'youtubeURL',
+      type: 'text',
+      label: 'Youtube Video URL',
+      admin: {
+        condition: (_, { type } = {}) => type === 'kushotoHero',
+      },
     },
   ],
   label: false,
