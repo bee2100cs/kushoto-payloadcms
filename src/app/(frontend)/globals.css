@@ -101,3 +101,130 @@ html[data-theme='dark'],
 html[data-theme='light'] {
   opacity: initial;
 }
+
+
+.it-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  filter: url("#goo");
+}
+
+.it-btn__blob {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background: #7fb432;
+  border-radius: 100%;
+  transform: translate3d(0, 150%, 0) scale(1.7);
+  transition: transform 0.65s;
+}
+
+.it-btn__blob:nth-child(1) {
+  left: 0%;
+  transition-delay: 0s;
+}
+
+.it-btn__blob:nth-child(2) {
+  left: 30%;
+  transition-delay: 0.09s;
+}
+
+.it-btn__blob:nth-child(3) {
+  left: 60%;
+  transition-delay: 0.18s;
+}
+
+.it-btn__blob:nth-child(4) {
+  left: 90%;
+  transition-delay: 0.27s;
+}
+
+.it-btn:hover .it-btn__blob {
+  transform: translateZ(0) scale(1.7);
+}
+
+@supports (filter: url("#goo")) {
+  .it-btn:hover .it-btn__blob {
+    transform: translateZ(0) scale(1.4);
+  }
+}
+
+.mask-image-custom {
+  -webkit-mask-image: url('https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/shapes2-lAamrNI2TYOQW8LyJ7fYOBPEdZ7UsR.svg');
+  mask-image: url('https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/shapes2-lAamrNI2TYOQW8LyJ7fYOBPEdZ7UsR.svg');
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+  mask-position: center center;
+}
+
+.mask-overlay {
+  top: 1px; /* Adjust as necessary */
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* Cursor ball  */
+.mouseCursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translateZ(0);
+  visibility: visible;
+  z-index: 999999;
+}
+
+.cursor-inner {
+  margin-left: -3px;
+  margin-top: -3px;
+  width: 6px;
+  height: 6px;
+  z-index: 10000001;
+  background-color: #ff5800;
+  border-radius: 50%;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+    margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  position: absolute;
+}
+
+.cursor-inner.cursor-hover {
+  margin-left: -30px;
+  margin-top: -30px;
+  width: 60px;
+  height: 60px;
+  background-color: #ff5800;
+  opacity: 0.2;
+}
+
+.cursor-outer {
+  margin-left: -15px;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ff5800;
+  box-sizing: border-box;
+  z-index: 10000000;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 0.08s ease-out;
+  position: absolute;
+}
+
+.cursor-outer.cursor-hover {
+  opacity: 0;
+}
+
+.mim_tm_all_wrap[data-magic-cursor='hide'] .mouseCursor {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: -1111;
+}
+

@@ -4,111 +4,120 @@ import { useHeaderTheme } from '@/providers/HeaderTheme'
 import React, { useEffect, useState } from 'react'
 import type { Page } from '@/payload-types'
 import { CMSLink } from '@/components/Link'
+import Link from 'next/link'
 import { Media } from '@/components/Media'
 import RichText from '@/components/RichText'
 import { motion } from 'framer-motion'
-
-// Function to extract YouTube Video ID from URL
-const getYouTubeVideoID = (url: string) => {
-  const match = url.match(
-    /(?:youtu\.be\/|youtube\.com\/(?:.*v=|.*\/embed\/|.*\/v\/|.*\/watch\?.*v=))([^&?]+)/,
-  )
-  return match ? match[1] : null
-}
+import { Fade, Zoom } from 'react-awesome-reveal'
 
 export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, richText }) => {
   const { setHeaderTheme } = useHeaderTheme()
-  const [isVideoOpen, setIsVideoOpen] = useState(false)
 
   useEffect(() => {
-    setHeaderTheme('dark')
-  }, [setHeaderTheme])
-
-  const videoID = youtubeURL ? getYouTubeVideoID(youtubeURL) : null
-  const embedURL = videoID ? `https://www.youtube.com/embed/${videoID}?autoplay=1&rel=0` : null
+    setHeaderTheme('light')
+  })
 
   return (
-    <div className="relative -mt-10 flex items-center justify-center text-white " data-theme="dark">
-      {/* Background Image */}
-      <div className="absolute inset-0 -z-10 min-h-[80vh]">
-        {media && typeof media === 'object' && (
-          <Media fill imgClassName="object-cover" priority resource={media} />
-        )}
+    <>
+      {/* New Kushoto Header */}
+      <div className="relative overflow-hidden pt-[190px]" data-theme="light">
+        {/* Background Image and shapes */}
+        <img
+          src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/shapes1-pJwK6IZok5qd9Sii6OvuL728vW8N0P.svg"
+          alt="Shape"
+          className="absolute top-0 right-0 z-0"
+        />
 
-        {/* Gradient Blur Overlay (Left to Right) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-transparent"></div>
-      </div>
+        <div className="mx-auto w-full max-w-[1644px] px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="xl:w-5/12 lg:w-8/12 mb-[30px]">
+              <div className="lg:pl-[66px] pl-0">
+                {/* Hero Content */}
+                <Fade direction="up" triggerOnce={false} duration={1200} delay={9}>
+                  <div className="text-center">
+                    <span className="inline-flex items-center justify-center gap-1 text-[#eb9309] tracking-[0.1em] uppercase font-semibold text-sm mb-6">
+                      <i className="fa-solid fa-heart btn__icon"></i>
+                      Welcome to Kushoto
+                    </span>
+                  </div>
 
-      {/* Content Container */}
-      <div className="container z-10 relative flex flex-col md:flex-row items-center justify-center md:justify-between w-full px-6 min-h-[80vh]">
-        {/* Left Side: Text & Links */}
-        <div className="w-full md:w-3/4 max-w-lg flex flex-col justify-center items-center md:items-start text-center md:text-left h-[50vh] flex-grow">
-          {richText && (
-            <RichText
-              className="mb-6 leading-tight text-left"
-              data={richText}
-              enableGutter={false}
-            />
-          )}
-          {Array.isArray(links) && links.length > 0 && (
-            <ul className="flex gap-4 justify-center md:justify-start">
-              {links.map(({ link }, i) => (
-                <li key={i}>
-                  <CMSLink {...link} />
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-
-        {/* Right Side: Floating Video Button */}
-        <div className="w-full md:w-1/4 relative flex items-end justify-center md:min-h-[80vh]">
-          {youtubeURL && (
-            <motion.button
-              className="absolute md:bottom-10 md:right-5 bottom-5 left-1/2 transform -translate-x-1/2 
-                bg-white w-16 h-16 sm:w-20 sm:h-20 rounded-full shadow-lg flex items-center justify-center"
-              onClick={() => setIsVideoOpen(true)}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <span
-                className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 
-                bg-red-500 text-white rounded-full"
-              >
-                ▶
-                <motion.span
-                  className="absolute inset-0 rounded-full bg-red-500 opacity-50"
-                  animate={{ scale: [1, 1.5], opacity: [0.6, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                />
-              </span>
-            </motion.button>
-          )}
-        </div>
-      </div>
-
-      {/* Video Modal (Popup Window) */}
-      {isVideoOpen && embedURL && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/80 z-50">
-          {/* Close Button */}
-          <button
-            className="absolute top-4 right-4 text-white text-3xl font-bold"
-            onClick={() => setIsVideoOpen(false)}
-          >
-            ✕
-          </button>
-          {/* YouTube Video Embed */}
-          <div className="relative w-full max-w-3xl aspect-video">
-            <iframe
-              className="w-full h-full rounded-lg shadow-lg"
-              src={embedURL}
-              title="YouTube Video"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-            ></iframe>
+                  <div className="text-center">
+                    <h1 className="font-[var(--font-franklin-gothic)] mb-8">
+                      <span className="block uppercase">
+                        <span className=" font-black text-[calc(0.5rem+3vw)] lg:text-[3rem] bg-gradient-to-r from-pink-500 to-yellow-500 text-transparent bg-clip-text mb-2 uppercase">
+                          Climate & Gender Justice Advocates
+                        </span>
+                      </span>
+                    </h1>
+                  </div>
+                  <div className="text-center max-w-2xl mx-auto px-4">
+                    <p className="text-xl lg:text-2xl leading-relaxed font-medium mb-4">
+                      We champion for climate and gender justice,&nbsp;
+                      <motion.span
+                        className="inline-block font-bold text-pink-600"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' }}
+                      >
+                        one story at a time
+                      </motion.span>
+                    </p>
+                    <p className="text-lg lg:text-xl leading-relaxed mb-12">
+                      Join us in amplifying stories that matter
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <Link
+                      className="relative inline-flex items-center gap-2 px-10 py-4 text-white font-semibold text-sm uppercase border-0 shadow-none rounded-none bg-[#eb9309] transition-all duration-400 ease-in-out hover:bg-[#7fb432] hover:text-white focus:outline-none focus:ring-0"
+                      href="/get-involved"
+                    >
+                      <span className="relative z-10">Get Involved</span>
+                      <i className="fa-solid fa-heart z-10"></i>
+                      <span className="absolute inset-0 bg-[#eb9309] transition-all duration-400 ease-in-out group-hover:scale-100 rounded-full opacity-50 z-0"></span>
+                      <svg className="it-btn__animation absolute bottom-0 left-0 w-full h-full z-11">
+                        <defs>
+                          <filter>
+                            <feGaussianBlur
+                              in="SourceGraphic"
+                              result="blur"
+                              stdDeviation="10"
+                            ></feGaussianBlur>
+                            <feColorMatrix
+                              in="blur"
+                              mode="matrix"
+                              values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                              result="goo"
+                            ></feColorMatrix>
+                            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                          </filter>
+                        </defs>
+                      </svg>
+                    </Link>
+                  </div>
+                </Fade>
+              </div>
+            </div>
+            <div className="col-xl-6 mb-30">
+              <Zoom triggerOnce={false}>
+                <div>
+                  <figure className="relative mr-[-70px] ml-[108px] ">
+                    <img
+                      src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/man-1abdJwsd73FFZc1AIFf8tDkBs7LDN9.webp"
+                      alt="Kushoto Man"
+                      className="w-full mask-image-custom"
+                    />
+                    <img
+                      className="absolute top-1 left-0 right-0 w-full mask-overlay"
+                      src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/shapes3-fEsD2mqlFFriAEQ8LGXzMywgF7uNr5.svg"
+                      alt="Kushoto"
+                    />
+                  </figure>
+                </div>
+              </Zoom>
+            </div>
           </div>
         </div>
-      )}
-    </div>
+      </div>
+    </>
   )
 }
