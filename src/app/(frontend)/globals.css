@@ -228,3 +228,17 @@ html[data-theme='light'] {
   z-index: -1111;
 }
 
+/* About */
+.mask {
+  -webkit-mask-image: url('https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_about/mask-shape1-LQ63NCEqV3vtsG5YY0GlfAUtFjEJrz.svg');
+  mask-image: url('https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_about/mask-shape1-LQ63NCEqV3vtsG5YY0GlfAUtFjEJrz.svg');
+}
+
+.keyFeatureBlock:hover .keyFeatureBlock__icon {
+  border-color: #eb9309;
+}
+
+.container {
+  max-width: 1314px;
+}
+

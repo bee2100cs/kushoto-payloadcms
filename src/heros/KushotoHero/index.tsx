@@ -9,6 +9,7 @@ import { Media } from '@/components/Media'
 import RichText from '@/components/RichText'
 import { motion } from 'framer-motion'
 import { Fade, Zoom } from 'react-awesome-reveal'
+import KushotoAbout from '@/components/HomeSections/KushotoAbout'
 
 export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, richText }) => {
   const { setHeaderTheme } = useHeaderTheme()
@@ -25,7 +26,7 @@ export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, 
         <img
           src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/shapes1-pJwK6IZok5qd9Sii6OvuL728vW8N0P.svg"
           alt="Shape"
-          className="absolute top-0 right-0 z-0"
+          className="absolute top-0 right-0 z-0 hidden xl3:block"
         />
 
         <div className="mx-auto w-full max-w-[1644px] px-4">
@@ -100,7 +101,7 @@ export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, 
             <div className="col-xl-6 mb-30">
               <Zoom triggerOnce={false}>
                 <div>
-                  <figure className="relative mr-[-70px] ml-[108px] ">
+                  <figure className="relative ">
                     <img
                       src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/man-1abdJwsd73FFZc1AIFf8tDkBs7LDN9.webp"
                       alt="Kushoto Man"
@@ -118,6 +119,7 @@ export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, 
           </div>
         </div>
       </div>
+      <KushotoAbout />
     </>
   )
 }

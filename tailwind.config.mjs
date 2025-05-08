@@ -46,6 +46,12 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        xl3: '1666px',
+        xl2: '1460px',
+        xl1: '1240px',
+        md1: '992px',
+      },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
