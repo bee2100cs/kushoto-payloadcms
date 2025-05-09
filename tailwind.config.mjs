@@ -62,6 +62,7 @@ const config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
+        'brand-orange': '#ff5800',
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
@@ -112,6 +113,21 @@ const config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        pulseBright: {
+          '0%, 100%': {
+            opacity: '0.4',
+            filter: 'brightness(1)',
+            transform: 'scaleY(1)',
+          },
+          '50%': {
+            opacity: '1',
+            filter: 'brightness(1.8)',
+            transform: 'scaleY(1.4)',
+          },
+        },
+      },
+      animation: {
+        'pulse-bright': 'pulseBright1.5s ease-in-out infinite',
       },
       typography: () => ({
         DEFAULT: {

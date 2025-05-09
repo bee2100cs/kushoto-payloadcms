@@ -10,6 +10,7 @@ import RichText from '@/components/RichText'
 import { motion } from 'framer-motion'
 import { Fade, Zoom } from 'react-awesome-reveal'
 import KushotoAbout from '@/components/HomeSections/KushotoAbout'
+import ProjectHighlights from '@/components/HomeSections/ProjectHighlights'
 
 export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, richText }) => {
   const { setHeaderTheme } = useHeaderTheme()
@@ -120,6 +121,8 @@ export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, 
         </div>
       </div>
       <KushotoAbout />
+      <div className="w-4/5 h-2 mx-auto bg-gradient-to-r from-transparent via-brand-orange to-transparent rounded-full animate-pulse-bright"></div>
+      <ProjectHighlights />
     </>
   )
 }
