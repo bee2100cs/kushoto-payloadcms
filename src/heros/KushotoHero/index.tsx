@@ -11,6 +11,10 @@ import { motion } from 'framer-motion'
 import { Fade, Zoom } from 'react-awesome-reveal'
 import KushotoAbout from '@/components/HomeSections/KushotoAbout'
 import ProjectHighlights from '@/components/HomeSections/ProjectHighlights'
+import Partners from '@/components/HomeSections/Partners'
+import PartnerTestimonial from '@/components/HomeSections/PartnerTestimonial'
+import TeamHome from '@/components/HomeSections/TeamHome'
+import FeaturedPosts from '@/components/HomeSections/FeaturedPosts'
 
 export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, richText }) => {
   const { setHeaderTheme } = useHeaderTheme()
@@ -22,12 +26,12 @@ export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, 
   return (
     <>
       {/* New Kushoto Header */}
-      <div className="relative overflow-hidden pt-[190px]" data-theme="light">
+      <div className="relative overflow-hidden pt-[20px]" data-theme="light">
         {/* Background Image and shapes */}
         <img
-          src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/shapes1-pJwK6IZok5qd9Sii6OvuL728vW8N0P.svg"
-          alt="Shape"
-          className="absolute top-0 right-0 z-0 hidden xl3:block"
+          src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/image-hero-1.webp"
+          alt="black background"
+          className="absolute top-0 right-0 z-0"
         />
 
         <div className="mx-auto w-full max-w-[1644px] px-4">
@@ -37,7 +41,7 @@ export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, 
                 {/* Hero Content */}
                 <Fade direction="up" triggerOnce={false} duration={1200} delay={9}>
                   <div className="text-center">
-                    <span className="inline-flex items-center justify-center gap-1 text-[#eb9309] tracking-[0.1em] uppercase font-semibold text-sm mb-6">
+                    <span className="inline-flex items-center justify-center gap-1 text-[#ff5800] tracking-[0.1em] uppercase font-semibold text-md mb-6">
                       <i className="fa-solid fa-heart btn__icon"></i>
                       Welcome to Kushoto
                     </span>
@@ -47,13 +51,13 @@ export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, 
                     <h1 className="font-[var(--font-franklin-gothic)] mb-8">
                       <span className="block uppercase">
                         <span className=" font-black text-[calc(0.5rem+3vw)] lg:text-[3rem] bg-gradient-to-r from-pink-500 to-yellow-500 text-transparent bg-clip-text mb-2 uppercase">
-                          Climate & Gender Justice Advocates
+                          Climate & Health Justice Advocates
                         </span>
                       </span>
                     </h1>
                   </div>
                   <div className="text-center max-w-2xl mx-auto px-4">
-                    <p className="text-xl lg:text-2xl leading-relaxed font-medium mb-4">
+                    <p className="text-xl lg:text-2xl leading-relaxed mb-4">
                       We champion for climate and gender justice,&nbsp;
                       <motion.span
                         className="inline-block font-bold text-pink-600"
@@ -102,16 +106,11 @@ export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, 
             <div className="col-xl-6 mb-30">
               <Zoom triggerOnce={false}>
                 <div>
-                  <figure className="relative ">
+                  <figure className="relative overflow-hidden xl:rounded-full rounded-0 mb-[30px] border-4 xl:border-[#ff5800] ">
                     <img
-                      src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/man-1abdJwsd73FFZc1AIFf8tDkBs7LDN9.webp"
-                      alt="Kushoto Man"
-                      className="w-full mask-image-custom"
-                    />
-                    <img
-                      className="absolute top-1 left-0 right-0 w-full mask-overlay"
-                      src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/shapes3-fEsD2mqlFFriAEQ8LGXzMywgF7uNr5.svg"
-                      alt="Kushoto"
+                      src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/hero-thumb-Q4g4YpnB2aJ9h3IpPVWeydwhI7tKWC.webp"
+                      alt="Kushoto hero"
+                      className="w-full"
                     />
                   </figure>
                 </div>
@@ -123,6 +122,11 @@ export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, 
       <KushotoAbout />
       <div className="w-4/5 h-2 mx-auto bg-gradient-to-r from-transparent via-brand-orange to-transparent rounded-full animate-pulse-bright"></div>
       <ProjectHighlights />
+      <div className="w-4/5 h-2 mx-auto bg-gradient-to-r from-transparent via-brand-orange to-transparent rounded-full animate-pulse-bright"></div>
+      <Partners />
+      <PartnerTestimonial />
+      <TeamHome />
+      <FeaturedPosts />
     </>
   )
 }

@@ -102,7 +102,6 @@ html[data-theme='light'] {
   opacity: initial;
 }
 
-
 .it-btn__blobs {
   position: relative;
   display: block;
@@ -148,24 +147,6 @@ html[data-theme='light'] {
   .it-btn:hover .it-btn__blob {
     transform: translateZ(0) scale(1.4);
   }
-}
-
-.mask-image-custom {
-  -webkit-mask-image: url('https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/shapes2-lAamrNI2TYOQW8LyJ7fYOBPEdZ7UsR.svg');
-  mask-image: url('https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/shapes2-lAamrNI2TYOQW8LyJ7fYOBPEdZ7UsR.svg');
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center center;
-  mask-position: center center;
-}
-
-.mask-overlay {
-  top: 1px; /* Adjust as necessary */
-  position: absolute;
-  left: 0;
-  right: 0;
 }
 
 /* Cursor ball  */

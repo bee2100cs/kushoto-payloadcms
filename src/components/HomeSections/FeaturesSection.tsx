@@ -10,21 +10,21 @@ const Features = [
     title: 'African Stories',
     des: 'We tell afrocentric stories to give a voice to the voiceless',
     icon: 'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_about/globe-africa-svgrepo-com-EodGAr85vmZ2WMBzK8gmuybdakojw9.svg',
-    width: '80%',
+    width: '90%',
     duration: 1000,
   },
   {
     title: 'Multimedia Tools',
     des: 'Our story mediums range from articles, photos and videos',
     icon: 'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_about/camera-svgrepo-com-QnKRyK7YY4O50q6eJhhepNpRx66dsU.svg',
-    width: '94%',
+    width: '90%',
     duration: 1200,
   },
   {
     title: 'Passionate Team',
     des: 'We boast a passionate, skilled and well informed team',
     icon: 'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_about/icon3-l6kahs24wgRWNNU2UH9bWtf7l7Nz5u.svg',
-    width: '70%',
+    width: '90%',
     duration: 1400,
   },
 ]
@@ -67,7 +67,9 @@ const FeaturesSection = () => {
                                 {features.title}
                               </Link>
                             </h3>
-                            <p className="text-black mb-[13px]">{features.des}</p>
+                            <p className="text-black text-md font-medium mb-[13px]">
+                              {features.des}
+                            </p>
                           </div>
                           <div
                             className="keyFeatureBlock__skill absolute h-[10px] bottom-[-5px] skill-bar"
@@ -98,7 +100,7 @@ const FeaturesSection = () => {
                       <span className="stroke-[4px] stroke-[#eb9309] md:stroke-[2px] mr-4">
                         One
                       </span>
-                      <span className="text-[#eb9309]"> Third</span>
+                      <span className="text-[#ff5800]"> Third</span>
                     </h2>
                   </div>
                 </Fade>
@@ -141,8 +143,10 @@ const FeaturesSection = () => {
                       <span className="block md1:mb-4">from the frontlines</span>
                     </h3>
                   </div>
-                  <div>
-                    <Button className="uppercase text-xl md:text-2xl p-10">Work With Us</Button>
+                  <div className="">
+                    <Button className="uppercase text-xl md:text-2xl p-10 bg-gradient-to-r from-[#ff5800] to-[rgba(202,243,51,0)] ">
+                      <a href="https://kushoto.org/get-involved">Work With Us</a>
+                    </Button>
                   </div>
                 </Fade>
               </div>

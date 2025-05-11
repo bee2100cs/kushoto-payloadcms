@@ -2,7 +2,7 @@ import React from 'react'
 
 const LeftToRight = () => {
   return (
-    <div className="flex flex-wrap -mx-[15px] mb-[50px] pb-10">
+    <div className="flex flex-wrap -mx-[15px] pb-10">
       <div className="w-full xl:w-7/12 p-4">
         <div
           className="relative border-l border-solid"
@@ -12,12 +12,12 @@ const LeftToRight = () => {
             {/* Title */}
             <div className="relative pb-[58px]">
               <div className="inline-block pl-[10px] mb-[9px] bg-gradient-to-r from-[#ff5800] to-[rgba(202,243,51,0)]">
-                <h4 className="text-[20px] leading-[35px] font-medium text-[var(--thm-black)] font-[var(--thm-body-font)] sm:text-[17px]">
+                <h4 className="text-[20px] leading-[35px] text-[var(--thm-black)] font-[var(--thm-body-font)] sm:text-[17px]">
                   Project Highlight
                 </h4>
               </div>
               <h2
-                className="text-[48px] leading-[1.2] font-bold text-[var(--thm-black)] font-[var(--thm-heading-font)] 
+                className="text-3xl leading-[1.2] text-[var(--thm-black)] font-[var(--thm-heading-font)] 
                xl:text-[43px] sm:text-[30px]"
               >
                 The Weight Of Our Water

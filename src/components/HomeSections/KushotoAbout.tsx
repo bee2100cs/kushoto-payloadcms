@@ -35,21 +35,24 @@ const KushotoAbout = () => {
             <div className="w-full md1:w-1/2 mb-8">
               <div>
                 <div className="mb-5">
-                  <span className="text-[#eb9309] uppercase tracking-wider font-semibold text-sm flex items-center gap-1.5 mb-4">
-                    <i className="fa-solid fa-heart animate-pulse"></i>
-                    about Kushoto
-                  </span>
+                  <div className="inline-block pl-[10px] mb-[9px] bg-gradient-to-r from-[#ff5800] to-[rgba(202,243,51,0)]">
+                    <span className="text-[#eb9309] uppercase tracking-wider text-[20px] leading-[35px] text-[var(--thm-black)] font-[var(--thm-body-font)] sm:text-[17px] flex items-center gap-1.5 ">
+                      <i className="fa-solid fa-heart animate-pulse"></i>
+                      about Kushoto
+                    </span>
+                  </div>
+
                   <h2 className="text-3xl uppercase leading-tight font-bold">
                     We tell impactful stories
                   </h2>
                 </div>
-                <p className="text-xl mb-6 pr-16 max-md:pr-0">
+                <p className="text-lg mb-6 pr-16 max-md:pr-0 font-medium">
                   Kushoto is a youth-founded grassroots organization dedicated to amplifying the
                   voices of communities in Africa impacted by climate change. We empower rural
                   populations through storytelling, creativity, and actionable insights, aiming to
                   drive conversations around climate and gender justice.
                 </p>
-                <p className="text-xl mb-6 pr-16 max-md:pr-0">
+                <p className="text-lg mb-6 pr-16 font-medium max-md:pr-0">
                   Our platform features a range of media, including videos, photos, blogs, and
                   infographics, to inspire, educate, and mobilize local communities. Additionally,
                   our initiatives—such as &quot;Adopt a Library&quot; and &quot;A Million Fruit
@@ -59,7 +62,12 @@ const KushotoAbout = () => {
                 <span className="block text-xl font-medium mb-[46px]">
                   Sound interesting? Learn everything about Kushoto by clicking me
                 </span>
-                <Button>Click Me</Button>
+                <Button className="inline-block pl-[10px] mb-[9px] bg-gradient-to-r from-[#ff5800] to-[rgba(202,243,51,0)]">
+                  <h4 className="text-[20px] leading-[35px] text-[var(--thm-black)] font-[var(--thm-body-font)] sm:text-[17px]">
+                    {' '}
+                    Click Me
+                  </h4>
+                </Button>
                 {/* add a learn more button leading to about page */}
               </div>
             </div>

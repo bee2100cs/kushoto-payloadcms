@@ -2,7 +2,7 @@ import React from 'react'
 
 const RightToLeft = () => {
   return (
-    <div className="flex flex-wrap -mx-[15px] mt-5 pt-10">
+    <div className="flex flex-wrap -mx-[15px] pt-10">
       <div className="w-full xl:w-5/12 p-4 hidden xl:block">
         <div className="relative max-w-[480px] w-full mx-auto xl:mx-0">
           <ul className="relative flex items-end -mx-[10px]">
@@ -32,7 +32,7 @@ const RightToLeft = () => {
                 </h4>
               </div>
               <h2
-                className="text-[48px] leading-[1.2] font-bold text-[var(--thm-black)] font-[var(--thm-heading-font)] 
+                className="text-3xl leading-[1.2] font-bold text-[var(--thm-black)] font-[var(--thm-heading-font)] 
                xl:text-[43px] sm:text-[30px]"
               >
                 Loss and Damage in Focus

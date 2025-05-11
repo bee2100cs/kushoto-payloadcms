@@ -101,8 +101,8 @@ const config = {
         warning: 'hsl(var(--warning))',
       },
       fontFamily: {
-        mono: ['var(--font-geist-mono)'],
-        sans: ['var(--font-geist-sans)'],
+        mono: ['var(--font-franklin-gothic)'],
+        sans: ['var(--font-franklin-gothic)'],
       },
       keyframes: {
         'accordion-down': {
@@ -139,6 +139,10 @@ const config = {
                 fontWeight: 'normal',
                 marginBottom: '0.25em',
                 color: '#FF5800',
+              },
+              p: {
+                fontWeight: 'normal',
+                fontFamily: 'var(--font-franklin-gothic)',
               },
             },
           ],
