@@ -149,7 +149,7 @@ export interface Page {
   id: string;
   title: string;
   hero: {
-    type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact' | 'kushotoHero';
+    type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact' | 'kushotoHero' | 'kushotoAgency';
     richText?: {
       root: {
         type: string;

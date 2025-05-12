@@ -18,6 +18,11 @@ const nextConfig = {
           protocol: url.protocol.replace(':', ''),
         }
       }),
+      // Blob storage domain
+      {
+        protocol: 'https',
+        hostname: 'g9jclz0ebr5f6zvy.public.blob.vercel-storage.com',
+      },
     ],
   },
   reactStrictMode: true,

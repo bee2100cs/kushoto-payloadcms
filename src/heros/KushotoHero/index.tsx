@@ -1,12 +1,9 @@
 'use client'
 
 import { useHeaderTheme } from '@/providers/HeaderTheme'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import type { Page } from '@/payload-types'
-import { CMSLink } from '@/components/Link'
 import Link from 'next/link'
-import { Media } from '@/components/Media'
-import RichText from '@/components/RichText'
 import { motion } from 'framer-motion'
 import { Fade, Zoom } from 'react-awesome-reveal'
 import KushotoAbout from '@/components/HomeSections/KushotoAbout'
@@ -15,8 +12,9 @@ import Partners from '@/components/HomeSections/Partners'
 import PartnerTestimonial from '@/components/HomeSections/PartnerTestimonial'
 import TeamHome from '@/components/HomeSections/TeamHome'
 import FeaturedPosts from '@/components/HomeSections/FeaturedPosts'
+import Image from 'next/image'
 
-export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, richText }) => {
+export const KushotoHero: React.FC<Page['hero']> = ({}) => {
   const { setHeaderTheme } = useHeaderTheme()
 
   useEffect(() => {
@@ -28,10 +26,13 @@ export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, 
       {/* New Kushoto Header */}
       <div className="relative overflow-hidden pt-[20px]" data-theme="light">
         {/* Background Image and shapes */}
-        <img
+        <Image
           src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/image-hero-1.webp"
           alt="black background"
           className="absolute top-0 right-0 z-0"
+          layout="fill"
+          objectFit="cover"
+          priority
         />
 
         <div className="mx-auto w-full max-w-[1644px] px-4">
@@ -107,10 +108,13 @@ export const KushotoHero: React.FC<Page['hero']> = ({ links, media, youtubeURL, 
               <Zoom triggerOnce={false}>
                 <div>
                   <figure className="relative overflow-hidden xl:rounded-full rounded-0 mb-[30px] border-4 xl:border-[#ff5800] ">
-                    <img
+                    <Image
                       src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_hero/hero-thumb-Q4g4YpnB2aJ9h3IpPVWeydwhI7tKWC.webp"
                       alt="Kushoto hero"
                       className="w-full"
+                      width={500} // Replace with the actual width of the image
+                      height={500} // Replace with the actual height of the image
+                      priority // Optional: Add this if the image is above the fold
                     />
                   </figure>
                 </div>

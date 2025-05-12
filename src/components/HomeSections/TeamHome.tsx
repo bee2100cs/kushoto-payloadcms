@@ -18,7 +18,7 @@ export const teamKushoto = {
         instagram: 'https://www.instagram.com/reginamutiru/',
       },
       image:
-        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/regina-mutiru-750-Bq2zWEZjTkTfNsFBby6V0XMaoIgz48.jpg',
+        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/regina-mutiru-750-ekPcaPHEzeQ5hgw2uewY8A9rdm8Zsx.webp',
     },
     {
       name: 'Ann Agar',
@@ -29,7 +29,7 @@ export const teamKushoto = {
         instagram: 'https://www.instagram.com/agar_anne/',
       },
       image:
-        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/Ann-750-fmyL52413H7oLFaCvaKyx7SZmXEcNO.jpg',
+        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/Ann-750-fMHFMejb71N6hFFxVptyuPG8ie3Nwu.webp',
     },
     {
       name: 'Winnie Gatwiri',
@@ -40,7 +40,7 @@ export const teamKushoto = {
         instagram: 'https://www.instagram.com/',
       },
       image:
-        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/gatwiri-750-zNQKuQ56iRrAVZnK7TqPcIvjj67bBS.jpg',
+        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/gatwiri-750-09CugQ22FfKx3UFJs27zA84z7aRenA.webp',
     },
     {
       name: 'Muchai Gikundi',
@@ -51,7 +51,7 @@ export const teamKushoto = {
         instagram: 'https://www.instagram.com/muchaibee/',
       },
       image:
-        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/bryan-750-NRe4JKX32f3Ihqz7MheqDpqLUfKunu.jpg',
+        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/bryan-750-RvwSwEeQJ92MMqE7PfAwtL561ho5ss.webp',
     },
     {
       name: 'Irene Mwende',
@@ -62,7 +62,7 @@ export const teamKushoto = {
         instagram: 'https://www.instagram.com/',
       },
       image:
-        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/kampombe-750-0mOYBUmMApEJjhpKQYOZ4QqCApVW3l.jpg',
+        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/mwende-750-V2rx5mp0FMzQJgipQEWRPbpmt6OHSt.webp',
     },
     {
       name: 'Kampombe Singe',
@@ -73,7 +73,7 @@ export const teamKushoto = {
         instagram: 'https://www.instagram.com/kampombe/',
       },
       image:
-        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/mwende-750-4r7wFjr1ryyg5EfZHNKIzII4G78jyR.jpg',
+        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/kampombe-750-aGpBXyPxcD4TbSsNPdrjXlFu9g0WgX.webp',
     },
     {
       name: 'Dennis Muthee',
@@ -83,7 +83,7 @@ export const teamKushoto = {
         instagram: 'https://www.instagram.com/denismuthee/',
       },
       image:
-        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/dennis-muthee-68NKCSQdkoHaVkQRzMAn013xDwoYuA.jpg',
+        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/dennis-muthee-BVtKwczXhBDN4a1jGSjqEdnnIknNiy.webp',
     },
   ],
 }

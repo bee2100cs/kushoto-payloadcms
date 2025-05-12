@@ -1,8 +1,9 @@
+import Image from 'next/image'
 import React from 'react'
 
 const RightToLeft = () => {
   return (
-    <div className="flex flex-wrap -mx-[15px] pt-10">
+    <div className="flex flex-wrap -mx-[15px] mt-5 pt-10">
       <div className="w-full xl:w-5/12 p-4 hidden xl:block">
         <div className="relative max-w-[480px] w-full mx-auto xl:mx-0">
           <ul className="relative flex items-end -mx-[10px]">
@@ -12,9 +13,11 @@ const RightToLeft = () => {
               data-wow-duration="1200ms"
             >
               <div className="relative overflow-hidden xl:rounded-[145px] rounded-[0px] mb-[30px] border-4 border-[#ff5800]">
-                <img
+                <Image
                   src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-projects/baringo-lake-6JqW7t0JpM92hYuk0eHkOM95gGNid2.webp"
                   alt="lake baring rising levels"
+                  width={356}
+                  height={475}
                 />
               </div>
             </li>
@@ -27,12 +30,12 @@ const RightToLeft = () => {
             {/* Title */}
             <div className="relative pb-[58px]">
               <div className="inline-block pl-[10px] mb-[9px] bg-gradient-to-r from-[#ff5800] to-[rgba(202,243,51,0)]">
-                <h4 className="text-[20px] leading-[35px] font-medium text-[var(--thm-black)] font-[var(--thm-body-font)] sm:text-[17px]">
+                <h4 className="text-[20px] leading-[35px] font-medium text-[var(--thm-black)] sm:text-[17px]">
                   Project Highlight
                 </h4>
               </div>
               <h2
-                className="text-3xl leading-[1.2] font-bold text-[var(--thm-black)] font-[var(--thm-heading-font)] 
+                className="text-3xl leading-[1.2] font-bold text-[var(--thm-black)]] 
                xl:text-[43px] sm:text-[30px]"
               >
                 Loss and Damage in Focus
@@ -41,9 +44,11 @@ const RightToLeft = () => {
             {/* 📱 Mobile Image (only shows on small screens) */}
             <div className="block xl:hidden mb-[30px] w-full">
               <div className="relative overflow-hidden xl:rounded-[145px] rounded-[0px] border-4 border-[#ff5800]">
-                <img
+                <Image
                   src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-projects/baringo-lake-6JqW7t0JpM92hYuk0eHkOM95gGNid2.webp"
                   alt="lake baring rising levels"
+                  width={356}
+                  height={475}
                 />
               </div>
             </div>

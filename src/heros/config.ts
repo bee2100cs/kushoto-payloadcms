@@ -39,6 +39,10 @@ export const hero: Field = {
           label: 'Kushoto Hero',
           value: 'kushotoHero',
         },
+        {
+          label: 'Kushoto Agency',
+          value: 'kushotoAgency',
+        },
       ],
       required: true,
     },
@@ -67,7 +71,7 @@ export const hero: Field = {
       type: 'upload',
       admin: {
         condition: (_, { type } = {}) =>
-          ['highImpact', 'mediumImpact', 'kushotoHero'].includes(type),
+          ['highImpact', 'mediumImpact', 'kushotoHero', 'kushotoAgency'].includes(type),
       },
       relationTo: 'media',
       required: true,

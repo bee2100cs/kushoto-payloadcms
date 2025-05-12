@@ -25,6 +25,11 @@ const config = {
     'bg-success/30',
     'border-warning',
     'bg-warning/30',
+    'bg-gradient-1',
+    'bg-gradient-2',
+    'bg-gradient-3',
+    'bg-gradient-4',
+    'bg-gradient-5',
   ],
   theme: {
     container: {
@@ -99,6 +104,19 @@ const config = {
         success: 'hsl(var(--success))',
         error: 'hsl(var(--error))',
         warning: 'hsl(var(--warning))',
+      },
+      backdropBlur: {
+        xs: '5px',
+      },
+      backgroundImage: {
+        'gradient-1': 'linear-gradient(135deg, #ffdecc, #ff9c66)',
+        'gradient-2': 'linear-gradient(135deg, #cceeff, #66ccff)',
+        'gradient-3': 'linear-gradient(135deg, #00c6ff, #0072ff)',
+        'gradient-4': 'linear-gradient(135deg, #11998e, #38ef7d)',
+        'gradient-5': 'linear-gradient(135deg, #f7971e, #ffd200)',
+      },
+      opacity: {
+        10: '0.1',
       },
       fontFamily: {
         mono: ['var(--font-franklin-gothic)'],
