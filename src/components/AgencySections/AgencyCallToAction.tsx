@@ -17,7 +17,7 @@ const AgencyCallToAction = () => {
           }}
         >
           <div className="bg-[rgba(0,0,0,0.6)] px-6 py-12 md:p-12">
-            <div className="flex w-full gap-4 items-center">
+            <div className="flex w-full flex-col lg:flex-row gap-4 items-center">
               <div className="w-full lg:w-4/6 text-center lg:text-left">
                 <div className="text-4xl sm:text-5xl font-bold text-white uppercase mb-0 font-poppins stroke-text">
                   {callToActionData.title}
