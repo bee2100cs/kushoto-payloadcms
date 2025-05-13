@@ -3,7 +3,7 @@ import React from 'react'
 const StyledDivider = () => {
   return (
     <hr
-      className="relative w-full h-2 border-0 m-0 overflow-hidden"
+      className="relative mx-auto max-w-[1320px] h-2 border-0 m-0 overflow-hidden"
       style={{
         backgroundImage:
           'repeating-linear-gradient(45deg, #ff5800 0, #ff5800 1px, transparent 0, transparent 5px)',

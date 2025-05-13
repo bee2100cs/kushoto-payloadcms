@@ -223,3 +223,35 @@ html[data-theme='light'] {
   max-width: 1314px;
 }
 
+/* Call to action component styling */
+.stroke-text,
+.stroke-text-dark {
+  color: #ff5800;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.4px;
+  -webkit-text-stroke-color: #ff5800;
+}
+
+@media (max-width: 1024px) {
+  .stroke-text,
+  .stroke-text-dark {
+    -webkit-text-stroke-width: 1.2px;
+  }
+}
+
+.stroke-text-white {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: white;
+}
+
+/* Contextual styling */
+[class*='bg-black'],
+[class*='bg-dark'],
+[class*='bg-gradient'] {
+  .stroke-text {
+    color: white;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: white;
+  }
+}

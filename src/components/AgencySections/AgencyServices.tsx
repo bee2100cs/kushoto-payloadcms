@@ -17,6 +17,7 @@ const iconMap = {
 const AgencyServices = () => {
   return (
     <section className="relative block pt-10 px-0 pb-10 z-10 ">
+      <StyledDivider />
       <div className="mx-auto max-w-[1320px] px-[15px] mt-5 pt-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5">
           {services.map((service, index) => {
@@ -30,7 +31,7 @@ const AgencyServices = () => {
                   <div className="inline-flex items-center justify-center w-[70px] h-[70px] bg-[#ff5800] text-white text-xl mb-4 ">
                     <Icon />
                   </div>
-                  <h3 className="font-bold text-2xl">{service.title}</h3>
+                  <h3 className="font-bold text-2xl text-[#000000]">{service.title}</h3>
                   <p className="text-xl font-semibold text-[#000000]">{service.description}</p>
                 </div>
               </div>

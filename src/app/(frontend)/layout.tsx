@@ -24,7 +24,7 @@ const franklinGothic = localFont({
       style: 'normal',
     },
     {
-      path: './fonts/FranklinGothic.ttf',
+      path: './fonts/FRABK.ttf',
       weight: '700',
       style: 'normal',
     },

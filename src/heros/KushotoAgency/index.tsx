@@ -7,6 +7,7 @@ import AboutAgency from '@/components/AgencySections/AboutAgency'
 import AgencyServices from '@/components/AgencySections/AgencyServices'
 import AgencyProcess from '@/components/AgencySections/AgencyProcess'
 import AgencyCallToAction from '@/components/AgencySections/AgencyCallToAction'
+import AgencyTestimonial from '@/components/AgencySections/AgencyTestimonial'
 
 export const KushotoAgency: React.FC<Page['hero']> = ({}) => {
   const { setHeaderTheme } = useHeaderTheme()
@@ -19,8 +20,9 @@ export const KushotoAgency: React.FC<Page['hero']> = ({}) => {
     <>
       <AboutAgency />
       <AgencyServices />
-      {/* <AgencyProcess />
-      <AgencyCallToAction /> */}
+      <AgencyProcess />
+      <AgencyCallToAction />
+      <AgencyTestimonial />
     </>
   )
 }

@@ -130,13 +130,13 @@ const TeamHome = () => {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent transition-all duration-300">
                           {/* Default inner content */}
-                          <div className="absolute bottom-0 left-0 w-full p-4 transition-all duration-300 ease-[cubic-bezier(0.165,0.84,0.44,1)] group-hover:opacity-0 group-hover:translate-y-[-8px]">
+                          <div className="absolute bottom-0 left-0 w-full p-4 transition-all duration-300 ease-\[cubic-bezier\(0.165,0.84,0.44,1\)\] group-hover:opacity-0 group-hover:translate-y-[-8px]">
                             <h5 className="mb-1 text-white">{member.name}</h5>
                             <span className="text-gray-300">{member.position}</span>
                           </div>
 
                           {/* Hover content */}
-                          <div className="absolute bottom-0 left-0 w-full p-4 opacity-0 translate-y-2 transition-all duration-300 ease-[cubic-bezier(0.165,0.84,0.44,1)] group-hover:opacity-100 group-hover:translate-y-0">
+                          <div className="absolute bottom-0 left-0 w-full p-4 opacity-0 translate-y-2 transition-all duration-300 ease-\[cubic-bezier\(0.165,0.84,0.44,1\)\] group-hover:opacity-100 group-hover:translate-y-0">
                             <ul className="flex space-x-2">
                               {member.social.facebook && (
                                 <li>

@@ -15,9 +15,7 @@ const AboutAgency = () => {
       <div className="mx-auto max-w-[1320px] px-[15px]">
         <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-5">
           <div className="w-full lg:w-1/2">
-            <h1 className="text-5xl font-normal italic text-neutral-600 mb-4">
-              {AgencyData.title}
-            </h1>
+            <h1 className="text-5xl font-normal italic text-[#ff5800] mb-6">{AgencyData.title}</h1>
 
             {/* On small screens: show only 3 items and expand toggle */}
             <div className="block sm:hidden">

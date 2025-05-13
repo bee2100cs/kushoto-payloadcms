@@ -61,24 +61,50 @@ export const AgencyData = {
     },
   ],
   serviceProcess: {
-    title: 'Our Kushoto Process',
+    title: 'The Kushoto Process',
     image: {
-      src: '',
+      src: 'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-services/brainstorming-ZTVu8NvEDZoaV2XnadwtmNzvlETx3A.svg',
       alt: 'Kushoto services process',
     },
     process: [
       {
-        title: 'Strategy & Planning',
-        description: '',
+        title: 'Strategic Planning & Discovery',
+        description:
+          'We begin by understanding your goals, audience, and vision. \
+        Through in-depth consultations and research, we define the project scope and \
+        create a roadmap tailored to your needs.',
       },
       {
-        title: 'Process Stage 2',
-        description: 'Explain in detail what happens in this stage',
+        title: 'Creative Concept Development',
+        description:
+          'Once we understand the objectives, our team brainstorms and \
+          designs concepts that align with your brand identity. We refine \
+          ideas through collaborative feedback to ensure your message is clear and impactful.',
       },
       {
-        title: 'Process Stage Three',
-        description: 'Explain in detail hat happens in the third stage',
+        title: 'Execution & Production',
+        description:
+          "With concepts approved, we move into production, whether it's designing assets,\
+         shooting video, or developing content. Our team ensures attention to detail, quality, and \
+         consistency throughout the process.",
+      },
+      {
+        title: 'Review, Delivery & Support',
+        description:
+          'In this final stage, we review the completed work with you, \
+          ensuring it meets your expectations. We provide any necessary revisions, \
+          followed by the final delivery, along with ongoing support if needed.',
       },
     ],
+  },
+}
+
+export const callToActionData = {
+  backgroundImage:
+    'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-services/kushoto%20old%20man-6gJvF4MHEIKsHeg5toQH1aomHEf1BX.webp',
+  title: "We're Ready To Get Started",
+  button: {
+    text: 'Hit Us Up',
+    link: '/get-involved',
   },
 }

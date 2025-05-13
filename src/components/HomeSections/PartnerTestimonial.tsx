@@ -8,10 +8,23 @@ export const testimonialData = {
       the voices of grass root communities, particularly for women and girls in Kenya. \
       Their dedication to storytelling and capturing the essence of our work has \
       not only elevated us but also brought much-needed attention to the challenges\
-      and triumphs of those we serve. The quality and depth of their ork reflect their deep \
+      and triumphs of those we serve. The quality and depth of their work reflect their deep \
       understanding of grass root issues, and we are proud to be associated with such a passionate and professional team',
       name: 'Jane Anyango',
       position: 'CEO/Founder - Polycom Girls',
+    },
+  ],
+  lucyAndDan: [
+    {
+      text: 'Kushoto exceeded all our expectations! \
+												From the very first meeting, they were professional, friendly, \
+												and truly understood our vision for the day. \
+												On the wedding day, they captured every special moment without being intrusive, \
+												and the final photos were absolutely stunning. \
+												We couldn’t be happier with the memories they’ve helped us preserve! \
+												Thank you, Kushoto Studio, for being a part of our love story.',
+      name: 'Lucy',
+      position: 'Bride',
     },
   ],
 }

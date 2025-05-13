@@ -50,7 +50,7 @@ const KushotoAbout = () => {
                   Kushoto is a youth-founded grassroots organization dedicated to amplifying the
                   voices of communities in Africa impacted by climate change. We empower rural
                   populations through storytelling, creativity, and actionable insights, aiming to
-                  drive conversations around climate and gender justice.
+                  drive conversations around climate and health justice.
                 </p>
                 <p className="text-lg mb-6 pr-16 font-medium max-md:pr-0">
                   Our platform features a range of media, including videos, photos, blogs, and
