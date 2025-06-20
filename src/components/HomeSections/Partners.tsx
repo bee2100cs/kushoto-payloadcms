@@ -1,11 +1,16 @@
 import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper/modules'
+import Link from 'next/link'
+import Image from 'next/image'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
+import Autoplay from 'embla-carousel-autoplay'
 
 export const partnerData = {
-  partnerMessage:
-    'Our partners are deeply committed to creating lasting, positive change in the world. They are actively involved in impactful initiatives that focus on climate and health justice, working to address inequalities and champion sustainable solutions.',
-  partnerIntro: 'Our Key Partners',
   partners: [
     {
       link: '#',
@@ -40,7 +45,7 @@ export const partnerData = {
     {
       link: '#',
       logo: 'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-partners/pen-ybeT4JH6jJvkvON5uVgq2rbynqazxh.png',
-      alt: 'PEN',
+      alt: 'PEN International',
     },
     {
       link: '#',
@@ -51,69 +56,54 @@ export const partnerData = {
 }
 
 const Partners = () => {
+  const autoplay = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true }),
+  )
+
   return (
-    <section className="relative block pt-10 px-0 pb-10 z-10">
-      <div className="mx-auto max-w-[1320px] px-[15px]">
-        <div className="">
-          <div className="flex justify-center items-center p-10 xl:p-20">
-            <div className="text-center max-w-xl">
-              <p className="font-semibold text-2xl">{partnerData.partnerMessage}</p>
-            </div>
-          </div>
-          <div className="max-w-screen-xl mx-auto">
-            <div className="flex flex-wrap lg:flex-nowrap items-center gap-4 lg:gap-5">
-              <div className="inline-block pl-[10px] mb-[9px] bg-gradient-to-r from-[#ff5800] to-[rgba(202,243,51,0)]">
-                <p className="font-semibold text-2xl">{partnerData.partnerIntro}</p>
-              </div>
-              <div className="w-full lg:w-9/12">
-                <Swiper
-                  slidesPerView={2}
-                  spaceBetween={30}
-                  breakpoints={{
-                    // when window width is >= 640px
-                    640: {
-                      slidesPerView: 3,
-                      spaceBetween: 30,
-                    },
-                    // when window width is >= 768px
-                    768: {
-                      slidesPerView: 4,
-                      spaceBetween: 40,
-                    },
-                    // when window width is >= 1024px
-                    1024: {
-                      slidesPerView: 5,
-                      spaceBetween: 60,
-                    },
-                  }}
-                  autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                  }}
-                  modules={[Autoplay]}
+    <section className="py-16 sm:py-24 bg-transparent">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-12 font-heading text-kushoto-neutralDark sm:text-4xl">
+          Our Trusted Partners
+        </h2>
+        <Carousel
+          opts={{
+            align: 'start',
+            loop: true,
+          }}
+          plugins={[autoplay.current]}
+          className="w-full max-w-6xl mx-auto"
+        >
+          <CarouselContent className="-ml-4">
+            {partnerData.partners.map((partner, index) => (
+              <CarouselItem
+                key={index}
+                className="pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
+              >
+                <Link
+                  href={partner.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block p-4 flex flex-col justify-center items-center h-full space-y-2 text-center"
+                  aria-label={`Visit ${partner.alt}'s website`}
                 >
-                  {partnerData.partners.map((partner, index) => (
-                    <SwiperSlide key={index}>
-                      <div className="partner-box">
-                        <a
-                          href={partner.link}
-                          className="block transition-opacity duration-150 ease-out hover:opacity-100"
-                        >
-                          <img
-                            src={partner.logo}
-                            alt={partner.alt}
-                            loading="lazy"
-                            className="w-full opacity-50"
-                          />
-                        </a>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-            </div>
-          </div>
-        </div>
+                  <Image
+                    src={partner.logo}
+                    alt={partner.alt}
+                    width={160}
+                    height={80}
+                    className="h-16 w-auto object-contain transition-all duration-300 filter grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100"
+                  />
+                  <p className="text-sm font-medium text-kushoto-neutralDark text-center transition-colors opacity-60 group-hover:opacity-100 mt-2">
+                    {partner.alt}
+                  </p>
+                </Link>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden sm:flex" />
+          <CarouselNext className="hidden sm:flex" />
+        </Carousel>
       </div>
     </section>
   )

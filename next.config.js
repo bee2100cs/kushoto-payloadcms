@@ -25,6 +25,9 @@ const nextConfig = {
       },
     ],
   },
+  experimental: {
+    allowedDevOrigins: ['http://6zax4k-ip-41-90-172-106.otxtnl.net'],
+  },
   reactStrictMode: true,
   redirects,
 }

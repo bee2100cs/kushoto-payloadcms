@@ -1,4 +1,8 @@
 import React from 'react'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
+import TeamMemberCard from './TeamMemberCard'
 
 export const teamKushoto = {
   title: 'Our Team',
@@ -6,7 +10,7 @@ export const teamKushoto = {
     'Meet the dedicated team behind Kushoto, a group of passionate professionals driven by a shared commitment to empowering communities and telling the stories that matter most.',
   button: {
     text: 'Meet All Members',
-    link: '#',
+    link: '/team',
   },
   members: [
     {
@@ -25,7 +29,7 @@ export const teamKushoto = {
       position: 'Strategic Adviser',
       social: {
         facebook: 'https://www.facebook.com/anne.claire.94',
-        LinkedIn: 'https://www.linkedin.com/in/anne-agar-031777152/',
+        linkedIn: 'https://www.linkedin.com/in/anne-agar-031777152/',
         instagram: 'https://www.instagram.com/agar_anne/',
       },
       image:
@@ -43,17 +47,6 @@ export const teamKushoto = {
         'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/gatwiri-750-09CugQ22FfKx3UFJs27zA84z7aRenA.webp',
     },
     {
-      name: 'Muchai Gikundi',
-      position: 'Programs Director',
-      social: {
-        facebook: 'https://www.facebook.com/muchai.bee/',
-        linkedIn: 'https://www.linkedin.com/in/bee2100/',
-        instagram: 'https://www.instagram.com/muchaibee/',
-      },
-      image:
-        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/bryan-750-RvwSwEeQJ92MMqE7PfAwtL561ho5ss.webp',
-    },
-    {
       name: 'Irene Mwende',
       position: 'Lead Researcher',
       social: {
@@ -64,6 +57,18 @@ export const teamKushoto = {
       image:
         'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/mwende-750-V2rx5mp0FMzQJgipQEWRPbpmt6OHSt.webp',
     },
+    {
+      name: 'Muchai Gikundi',
+      position: 'Programs Director',
+      social: {
+        facebook: 'https://www.facebook.com/muchai.bee/',
+        linkedIn: 'https://www.linkedin.com/in/bee2100/',
+        instagram: 'https://www.instagram.com/muchaibee/',
+      },
+      image:
+        'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-team/bryan-750-RvwSwEeQJ92MMqE7PfAwtL561ho5ss.webp',
+    },
+
     {
       name: 'Kampombe Singe',
       position: 'Creative Director',
@@ -89,95 +94,36 @@ export const teamKushoto = {
 }
 
 const TeamHome = () => {
-  return (
-    <section className="relative block pt-10 px-0 pb-10 z-10">
-      <div className="mx-auto max-w-[1320px]  px-[15px]">
-        {/* Title */}
-        <div className="relative">
-          <div className="inline-block pl-[10px] mb-[9px] bg-gradient-to-r from-[#ff5800] to-[rgba(202,243,51,0)]">
-            <p className="text-2xl leading-[35px] font-semibold text-[var(--thm-black)] sm:text-[17px]">
-              Team Kushoto
-            </p>
-          </div>
-        </div>
-        {/* Team description */}
-        <div className="relative py-24 pt-0 md:py-20 sm:py-16">
-          <div className="relative">
-            <div className="flex flex-col lg:flex-row gap-4 lg:gap-5 items-center">
-              <div className="w-full md:w-10/12 lg:w-8/12 xl:w-4/12 xl:order-2">
-                <h2 className="text-4xl md:text-5xl hidden lg:block font-normal italic text-neutral-600 mb-4">
-                  {teamKushoto.title}
-                </h2>
-                <p>{teamKushoto.description}</p>
-                <a
-                  className="mt-4 inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-2 px-4 rounded"
-                  href={teamKushoto.button.link}
-                >
-                  {teamKushoto.button.text}
-                </a>
-              </div>
-              {/* Team members */}
-              <div className="w-full xl:w-8/12 xl:order-1">
-                <div className="flex flex-col lg:flex-row gap-3">
-                  {teamKushoto.members.slice(0, 3).map((member, index) => (
-                    <div key={index} className="w-full md:w-1/3">
-                      <div className="relative overflow-hidden group">
-                        <img
-                          src={member.image}
-                          alt={member.name}
-                          loading="lazy"
-                          className="w-full transform transition-transform duration-700 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent transition-all duration-300">
-                          {/* Default inner content */}
-                          <div className="absolute bottom-0 left-0 w-full p-4 transition-all duration-300 ease-\[cubic-bezier\(0.165,0.84,0.44,1\)\] group-hover:opacity-0 group-hover:translate-y-[-8px]">
-                            <h5 className="mb-1 text-white">{member.name}</h5>
-                            <span className="text-gray-300">{member.position}</span>
-                          </div>
+  // Display the first 4 members on the home page
+  const featuredMembers = teamKushoto.members.slice(0, 4)
 
-                          {/* Hover content */}
-                          <div className="absolute bottom-0 left-0 w-full p-4 opacity-0 translate-y-2 transition-all duration-300 ease-\[cubic-bezier\(0.165,0.84,0.44,1\)\] group-hover:opacity-100 group-hover:translate-y-0">
-                            <ul className="flex space-x-2">
-                              {member.social.facebook && (
-                                <li>
-                                  <a
-                                    href={member.social.facebook}
-                                    className="transition-opacity duration-100 text-white hover:opacity-80"
-                                  >
-                                    <i className="bi bi-facebook"></i>
-                                  </a>
-                                </li>
-                              )}
-                              {member.social.linkedIn && (
-                                <li>
-                                  <a
-                                    href={member.social.linkedIn}
-                                    className="transition-opacity duration-100 text-white hover:opacity-80"
-                                  >
-                                    <i className="bi bi- linkedIn"></i>
-                                  </a>
-                                </li>
-                              )}
-                              {member.social.instagram && (
-                                <li>
-                                  <a
-                                    href={member.social.instagram}
-                                    className="transition-opacity duration-100 text-white hover:opacity-80"
-                                  >
-                                    <i className="bi bi-instagram"></i>
-                                  </a>
-                                </li>
-                              )}
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+  return (
+    <section className="py-16 sm:py-24 bg-transparent">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12 max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold font-heading text-kushoto-neutralDark sm:text-4xl">
+            {teamKushoto.title}
+          </h2>
+          <p className="text-lg text-kushoto-neutralDark/80 mt-4">{teamKushoto.description}</p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16">
+          {featuredMembers.map((member) => (
+            <TeamMemberCard key={member.name} member={member} />
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full bg-kushoto-primary hover:bg-kushoto-primaryDark text-white px-8"
+          >
+            <Link href={teamKushoto.button.link}>
+              {teamKushoto.button.text}
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

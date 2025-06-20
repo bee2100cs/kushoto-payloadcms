@@ -1,81 +1,67 @@
 import React from 'react'
-import { Button } from '../ui/button'
-import FeaturesSection from './FeaturesSection'
+import Link from 'next/link'
+import Image from 'next/image'
+import { Button } from '../ui/button' // Assumes this path is correct
+import { ArrowRight } from 'lucide-react'
 
 const KushotoAbout = () => {
   return (
-    <section className="relative">
-      <div className="pt-[79px] pb-10 relative">
-        <img
-          className="mask-underlay absolute top-[66%] -z-10 hidden md1:block xl1:left-[-10%] xl2:left-[-11px] md1:left-[-30%] animate__animated animate__fadeInLeft"
-          data-wow-duration="1200ms"
-          data-wow-delay="300ms"
-          src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_about/mask-shape3-ljFUDiUjsmSyDrmaozplKvi4AKcwkq.svg"
-          alt="   kushoto mask Shape"
-        />
-        <div
-          className="mask absolute top-0 z-[-1] xl2:left-[-11px] xl1:left-[-10%] md1:left-[-30%] p-px hidden md1:block animate__animated animate__fadeInLeft"
-          data-wow-duration="1200ms"
-          data-wow-delay="200ms"
-        >
-          <img
-            src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_about/kushoto-about.webp"
-            alt="Kushoto"
-            className="relative"
-          />
-          <img
-            className="absolute left-[2px] top-[-1px]"
-            src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_about/mask-shape2-S9IRXDGIt0SnKkXw3vec2ptMZrwEDs.svg"
-            alt="Kushoto overlay"
-          />
-        </div>
-
+    <>
+      <section className="py-16 lg:py-24 bg-transparent">
         <div className="container mx-auto px-4">
-          <div className="flex justify-end">
-            <div className="w-full md1:w-1/2 mb-8">
-              <div>
-                <div className="mb-5">
-                  <div className="inline-block pl-[10px] mb-[9px] bg-gradient-to-r from-[#ff5800] to-[rgba(202,243,51,0)]">
-                    <span className="text-[#eb9309] uppercase tracking-wider text-[20px] leading-[35px] text-[var(--thm-black)] font-[var(--thm-body-font)] sm:text-[17px] flex items-center gap-1.5 ">
-                      <i className="fa-solid fa-heart animate-pulse"></i>
-                      about Kushoto
-                    </span>
-                  </div>
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Image on the left */}
+            <div className="animate-fade-in-up">
+              <Image
+                src="https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto%20about.-qiSWmttAvezJPNstWGxwx1mAFx87Qh.webp"
+                alt="Kushoto team engaging with a local community"
+                width={500} // Replace with the actual image width
+                height={400} // Replace with the actual image height
+                className="rounded-lg shadow-xl w-full h-auto object-cover aspect-[5/4] transition-transform duration-300 hover:scale-105"
+              />
+            </div>
 
-                  <h2 className="text-3xl uppercase leading-tight font-bold">
-                    We tell impactful stories
-                  </h2>
-                </div>
-                <p className="text-lg mb-6 pr-16 max-md:pr-0 font-medium">
-                  Kushoto is a youth-founded grassroots organization dedicated to amplifying the
+            {/* Content on the right */}
+            <div
+              className="flex flex-col items-start animate-fade-in-up"
+              style={{ animationDelay: '0.2s' }}
+            >
+              <span className="text-sm font-bold text-kushoto-primary uppercase tracking-wider mb-2">
+                About Kushoto
+              </span>
+              <h2 className="text-3xl lg:text-4xl font-bold font-heading mb-6 text-kushoto-neutralDark">
+                We tell impactful stories
+              </h2>
+              <div className="space-y-4 text-lg text-kushoto-neutralDark/80 mb-6">
+                <p>
+                  Kushoto is a women-founded grassroots organization dedicated to amplifying the
                   voices of communities in Africa impacted by climate change. We empower rural
                   populations through storytelling, creativity, and actionable insights, aiming to
                   drive conversations around climate and health justice.
                 </p>
-                <p className="text-lg mb-6 pr-16 font-medium max-md:pr-0">
-                  Our platform features a range of media, including videos, photos, blogs, and
-                  infographics, to inspire, educate, and mobilize local communities. Additionally,
-                  our initiatives—such as &quot;Adopt a Library&quot; and &quot;A Million Fruit
-                  Trees&quot;—focus on enhancing education and promoting climate adaptation for
-                  children.
+                <p>
+                  We utilize a range of media, including videos, photos, blogs, and infographics, to
+                  inspire, educate, and mobilize local communities.
                 </p>
-                <span className="block text-xl font-medium mb-[46px]">
-                  Sound interesting? Learn everything about Kushoto by clicking me
-                </span>
-                <Button className="inline-block pl-[10px] mb-[9px] bg-gradient-to-r from-[#ff5800] to-[rgba(202,243,51,0)]">
-                  <h4 className="text-[20px] leading-[35px] text-[var(--thm-black)] font-[var(--thm-body-font)] sm:text-[17px]">
-                    {' '}
-                    Click Me
-                  </h4>
-                </Button>
-                {/* add a learn more button leading to about page */}
               </div>
+              <p className="mb-8 font-semibold text-kushoto-secondary text-lg">
+                Sound interesting? Learn everything about Kushoto by clicking below.
+              </p>
+              <Button
+                asChild
+                size="lg"
+                className="bg-kushoto-primary hover:bg-kushoto-primaryDark text-white rounded-full transition-transform hover:scale-105 shadow-lg px-8 py-3"
+              >
+                <Link href="/about">
+                  Learn More
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
-      </div>
-      <FeaturesSection />
-    </section>
+      </section>
+    </>
   )
 }
 

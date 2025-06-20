@@ -3,95 +3,104 @@
 @tailwind utilities;
 
 @layer base {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: unset;
-    font-weight: unset;
-  }
-
+  /* --- 1. KUSHOTO THEME VARIABLES (LIGHT MODE) --- */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Kushoto Palette */
+    --kushoto-primary: 21 100% 50%; /* #FF5800 */
+    --kushoto-primary-dark: 21 100% 40%; /* #CC4400 */
+    --kushoto-secondary: 120 25% 39%; /* #4C7C4C */
+    --kushoto-accent: 48 100% 50%; /* #FFCC00 */
+    --kushoto-neutral-light: 60 33% 95%; /* #F5F5F0 */
+    --kushoto-neutral-dark: 0 0% 20%; /* #333333 */
+    --kushoto-muted: 30 38% 57%; /* #8B5E3C */
 
-    --card: 240 5% 96%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Shadcn/ui variables mapped to Kushoto's Light Theme */
+    --background: var(--kushoto-neutral-light); /* 60 33% 95% */
+    --foreground: var(--kushoto-neutral-dark); /* 0 0% 20% */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: var(--kushoto-neutral-light);
+    --card-foreground: var(--kushoto-neutral-dark);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: var(--kushoto-neutral-light);
+    --popover-foreground: var(--kushoto-neutral-dark);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: var(--kushoto-primary);
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: var(--kushoto-secondary);
+    --secondary-foreground: 0 0% 100%; /* White */
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--kushoto-accent);
+    --accent-foreground: var(--kushoto-neutral-dark);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 240 6% 80%;
+    --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: var(--kushoto-primary);
 
-    --radius: 0.2rem;
+    --radius: 0.5rem; /* Updated from 0.2rem for consistency */
 
+    /* Preserved custom variables from your old file */
     --success: 196 52% 74%;
     --warning: 34 89% 85%;
     --error: 10 100% 86%;
   }
 
+    /* --- 2. KUSHOTO THEME VARIABLES (DARK MODE) --- */
   [data-theme='dark'] {
-    --background: 0 0% 0%;
-    --foreground: 210 40% 98%;
+    /* Shadcn/ui variables mapped to Kushoto's Dark Theme */
+    --background: var(--kushoto-neutral-dark); /* 0 0% 20% */
+    --foreground: var(--kushoto-neutral-light); /* 60 33% 95% */
 
-    --card: 0 0% 4%;
-    --card-foreground: 210 40% 98%;
+    --card: var(--kushoto-neutral-dark);
+    --card-foreground: var(--kushoto-neutral-light);
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: var(--kushoto-neutral-dark);
+    --popover-foreground: var(--kushoto-neutral-light);
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: var(--kushoto-primary);
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: var(--kushoto-secondary);
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: var(--kushoto-accent);
+    --accent-foreground: var(--kushoto-neutral-dark);
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0, 0%, 15%, 0.8;
+    --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: var(--kushoto-primary-dark);
 
+    /* Preserved custom variables from your old file */
     --success: 196 100% 14%;
     --warning: 34 51% 25%;
     --error: 10 39% 43%;
   }
-}
-
-@layer base {
+  
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground min-h-[100vh] flex flex-col;
+    @apply bg-background text-foreground min-h-[100vh] flex flex-col font-sans; /* Added font-sans */
   }
+  /* --- 3. APPLY HEADING FONT --- */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
 }
+
 
 html {
   opacity: 0;
@@ -102,52 +111,6 @@ html[data-theme='light'] {
   opacity: initial;
 }
 
-.it-btn__blobs {
-  position: relative;
-  display: block;
-  height: 100%;
-  filter: url("#goo");
-}
-
-.it-btn__blob {
-  position: absolute;
-  width: 25%;
-  height: 100%;
-  background: #7fb432;
-  border-radius: 100%;
-  transform: translate3d(0, 150%, 0) scale(1.7);
-  transition: transform 0.65s;
-}
-
-.it-btn__blob:nth-child(1) {
-  left: 0%;
-  transition-delay: 0s;
-}
-
-.it-btn__blob:nth-child(2) {
-  left: 30%;
-  transition-delay: 0.09s;
-}
-
-.it-btn__blob:nth-child(3) {
-  left: 60%;
-  transition-delay: 0.18s;
-}
-
-.it-btn__blob:nth-child(4) {
-  left: 90%;
-  transition-delay: 0.27s;
-}
-
-.it-btn:hover .it-btn__blob {
-  transform: translateZ(0) scale(1.7);
-}
-
-@supports (filter: url("#goo")) {
-  .it-btn:hover .it-btn__blob {
-    transform: translateZ(0) scale(1.4);
-  }
-}
 
 /* Cursor ball  */
 .mouseCursor {
@@ -207,51 +170,4 @@ html[data-theme='light'] {
   visibility: hidden;
   position: absolute;
   z-index: -1111;
-}
-
-/* About */
-.mask {
-  -webkit-mask-image: url('https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_about/mask-shape1-LQ63NCEqV3vtsG5YY0GlfAUtFjEJrz.svg');
-  mask-image: url('https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto_about/mask-shape1-LQ63NCEqV3vtsG5YY0GlfAUtFjEJrz.svg');
-}
-
-.keyFeatureBlock:hover .keyFeatureBlock__icon {
-  border-color: #eb9309;
-}
-
-.container {
-  max-width: 1314px;
-}
-
-/* Call to action component styling */
-.stroke-text,
-.stroke-text-dark {
-  color: #ff5800;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1.4px;
-  -webkit-text-stroke-color: #ff5800;
-}
-
-@media (max-width: 1024px) {
-  .stroke-text,
-  .stroke-text-dark {
-    -webkit-text-stroke-width: 1.2px;
-  }
-}
-
-.stroke-text-white {
-  color: white;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-color: white;
-}
-
-/* Contextual styling */
-[class*='bg-black'],
-[class*='bg-dark'],
-[class*='bg-gradient'] {
-  .stroke-text {
-    color: white;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: white;
-  }
 }
