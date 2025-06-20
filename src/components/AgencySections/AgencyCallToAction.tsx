@@ -1,7 +1,6 @@
 import React from 'react'
 import StyledDivider from './StyleDivider'
 import { callToActionData } from './Data'
-import { CallToAction } from '@/blocks/CallToAction/config'
 
 const AgencyCallToAction = () => {
   return (
