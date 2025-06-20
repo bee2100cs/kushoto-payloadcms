@@ -6,6 +6,9 @@ import React from 'react'
 import RichText from '@/components/RichText'
 
 import { CollectionArchive } from '@/components/CollectionArchive'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 export const ArchiveBlock: React.FC<
   ArchiveBlockProps & {
@@ -53,13 +56,37 @@ export const ArchiveBlock: React.FC<
   }
 
   return (
-    <div className="my-16" id={`block-${id}`}>
-      {introContent && (
-        <div className="container mb-16">
-          <RichText className="ms-0 max-w-[48rem]" data={introContent} enableGutter={false} />
+    // Use standard section padding for consistency
+    <section className="py-16 sm:py-24" id={`block-${id}`}>
+      <div className="container mx-auto px-4">
+        {/* 1. Added a consistent heading section */}
+        <div className="mb-16 text-center">
+          <h2 className="text-3xl font-bold font-heading text-kushoto-neutralDark sm:text-4xl">
+            From our Blog
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-kushoto-neutralDark/80">
+            Explore our latest articles, stories, and insights from the frontlines of our work.
+          </p>
+
+          {/* 2. Render introContent from the CMS as an optional subheading */}
+          {introContent && (
+            <div className="prose prose-lg mx-auto mt-6 text-kushoto-neutralDark/70">
+              <RichText data={introContent} enableGutter={false} />
+            </div>
+          )}
         </div>
-      )}
-      <CollectionArchive posts={posts} />
-    </div>
+
+        {/* 3. Render the collection of posts */}
+        <CollectionArchive posts={posts} />
+      </div>
+      <div className="text-center mt-12">
+        <Button asChild size="lg" className="rounded-full">
+          <Link href="/blog">
+            View All Posts
+            <ArrowRight className="ml-2" />
+          </Link>
+        </Button>
+      </div>
+    </section>
   )
 }
