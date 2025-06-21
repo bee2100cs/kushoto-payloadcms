@@ -19,7 +19,7 @@ export async function Footer() {
 
   return (
     <footer className="bg-kushoto-neutralDark text-kushoto-neutralLight">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-5 py-16">
         {/* 1. Main Footer Grid now includes the social links column */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
           {/* Logo and Mission Column */}
@@ -128,9 +128,7 @@ export async function Footer() {
     This div wraps the ThemeSelector and acts as the third grid cell.
     `justify-self-end` aligns the content of this cell to its right edge.
   */}
-          <div className="sm:col-start-3 sm:justify-self-end">
-            <ThemeSelector />
-          </div>
+          <div className="sm:col-start-3 sm:justify-self-end"></div>
         </div>
       </div>
     </footer>

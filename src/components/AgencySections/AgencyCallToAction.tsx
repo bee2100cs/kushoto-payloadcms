@@ -1,34 +1,44 @@
-import React from 'react'
-import StyledDivider from './StyleDivider'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 import { callToActionData } from './Data'
+
+// Destructure data for cleaner access
+const { backgroundImage, title, button } = callToActionData
 
 const AgencyCallToAction = () => {
   return (
-    <section className="relative block pt-10 px-0 pb-10 z-10">
-      <StyledDivider />
-      <div className="mx-auto max-w-[1320px] px-[15px] mt-10">
+    <section className="bg-background py-16 md:py-24">
+      <div className="container mx-auto px-4">
         <div
-          className="relative bg-center bg-no-repeat bg-cover rounded-[2em] overflow-hidden"
-          style={{
-            backgroundImage: `url(${callToActionData.backgroundImage})`,
-            backgroundAttachment: 'fixed',
-            backgroundPosition: 'center 0px',
-          }}
+          className="relative bg-cover bg-center lg:bg-fixed rounded-2xl shadow-2xl overflow-hidden"
+          style={{ backgroundImage: `url(${backgroundImage})` }}
         >
-          <div className="bg-[rgba(0,0,0,0.6)] px-6 py-12 md:p-12">
-            <div className="flex w-full flex-col lg:flex-row gap-4 items-center">
-              <div className="w-full lg:w-4/6 text-center lg:text-left">
-                <div className="text-4xl sm:text-5xl font-bold text-white uppercase mb-0 font-poppins stroke-text">
-                  {callToActionData.title}
-                </div>
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/60 z-0"></div>
+
+          {/* Content */}
+          <div className="relative z-10 px-6 py-16 md:p-20">
+            <div className="flex w-full flex-col lg:flex-row gap-8 items-center justify-between">
+              {/* Left Side: Title */}
+              <div className="w-full lg:w-auto text-center lg:text-left">
+                <h2 className="text-4xl md:text-5xl font-bold text-white uppercase font-heading stroke-text-white">
+                  {title}
+                </h2>
               </div>
-              <div className="w-full lg:w-1/3 text-center lg:text-right" data-cue="slideInLeft">
-                <a
-                  href={callToActionData.button.link}
-                  className="inline-block rounded-full px-6 py-3 text-white bg-gradient-to-r from-orange-500 to-pink-500 text-lg font-medium hover:opacity-90 transition"
+
+              {/* Right Side: Button */}
+              <div className="w-full lg:w-auto text-center lg:text-right">
+                <Button
+                  asChild
+                  size="lg"
+                  className="
+                    bg-gradient-to-r from-kushoto-primary to-pink-500 text-white font-bold
+                    px-8 py-4 text-lg rounded-full shadow-lg
+                    transition-transform duration-300 hover:scale-105
+                  "
                 >
-                  {callToActionData.button.text}
-                </a>
+                  <Link href={button.link}>{button.text}</Link>
+                </Button>
               </div>
             </div>
           </div>

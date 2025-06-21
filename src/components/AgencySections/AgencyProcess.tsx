@@ -1,52 +1,63 @@
-import React from 'react'
-import StyledDivider from './StyleDivider'
-import { AgencyData } from './Data'
+import { AgencyData } from './Data' // Assuming Data.ts is in the same directory
 import Image from 'next/image'
 
-const agencyProcess = AgencyData.serviceProcess
+// Data can be destructured for cleaner access
+const { title, image, process } = AgencyData.serviceProcess
 
 const AgencyProcess = () => {
   return (
-    <section className="relative block pt-10 px-0 pb-10 z-10">
-      <StyledDivider />
-      <div className="mx-auto max-w-[1320px] px-[15px]">
-        <div className=" flex flex-col lg:flex-row w-full  gap-4 xl:gap-5 items-center mt-10 pt-10">
-          <div className="w-full lg:w-1/2 xl:w-7/12 lg:order-2">
+    <section className="bg-background py-16 md:py-24">
+      {/* Optional: Add a subtle top border for separation if StyledDivider is removed */}
+      <hr className="border-t border-border/60 w-1/2 mx-auto mb-16 md:mb-24" />
+
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col lg:flex-row w-full gap-12 lg:gap-16 items-center">
+          {/* Right Side: Image Column */}
+          <div className="w-full lg:w-6/12 lg:order-2">
             <Image
-              src={agencyProcess.image.src}
-              alt={agencyProcess.image.alt}
+              src={image.src}
+              alt={image.alt}
               width={700}
               height={467}
-              className="filter transition dark:invert"
+              className="rounded-lg shadow-lg"
             />
           </div>
-          <div className="w-full lg:w-1/2 xl:w-5/12 lg:order-1">
-            <h2 className="text-5xl font-normal italic text-gray-600 mb-4 font-tertiary">
-              {agencyProcess.title}
+
+          {/* Left Side: Content Column */}
+          <div className="w-full lg:w-6/12 lg:order-1">
+            <h2 className="text-4xl md:text-5xl font-heading font-semibold text-kushoto-secondary mb-10 text-center lg:text-left">
+              {title}
             </h2>
-            {agencyProcess.process.map((process, index) => (
-              <div
-                key={index}
-                data-cue="slideInRight"
-                className={`
-                    relative mt-4 xl:mt-5 pl-[74px]
-                    ${index === 0 ? 'active' : ''}
-                  `}
-              >
-                <div
-                  className="absolute top-0 left-0 z-[1] w-[50px] h-[50px]
-                    text-center leading-[50px] border border-dashed rounded-full
-                    text-gray-800 font-secondary overflow-hidden
-                    transition-all duration-100 ease-linear
-                    group-[.active]:border-transparent group-[.active]:text-white
-                  "
-                >
-                  <span>{index + 1}</span>
+
+            {/* Process Steps List */}
+            <div className="space-y-8">
+              {process.map((step, index) => (
+                <div key={index} className="flex items-start gap-4 md:gap-6">
+                  {/* Numbered Circle */}
+                  <div
+                    className={`
+                      flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full font-heading font-bold text-lg
+                      transition-colors duration-300
+                      ${
+                        index === 0
+                          ? 'bg-kushoto-primary text-white' // Active/first state
+                          : 'bg-kushoto-neutral-light border-2 border-kushoto-primary/30 text-kushoto-primary' // Inactive state
+                      }
+                    `}
+                  >
+                    {index + 1}
+                  </div>
+
+                  {/* Step Title and Description */}
+                  <div>
+                    <h4 className="font-heading font-semibold text-xl text-foreground mb-1">
+                      {step.title}
+                    </h4>
+                    <p className="text-base text-muted-foreground">{step.description}</p>
+                  </div>
                 </div>
-                <h4 className="font-semibold text-xl mt-2">{process.title}</h4>
-                <p className="text-md text-gray-600">{process.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
