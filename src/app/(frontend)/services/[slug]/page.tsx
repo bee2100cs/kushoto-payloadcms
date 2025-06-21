@@ -7,15 +7,9 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ArrowRight, MessageSquare } from 'lucide-react'
 
-// The page component receives `params` as a prop
-type ServiceDetailPageProps = {
-  params: {
-    slug: string
-  }
-}
-
-const ServiceDetailPage = ({ params }: ServiceDetailPageProps) => {
-  // Get the slug from the params prop, not useParams
+// And instead, type the props inline directly in the function definition:
+const ServiceDetailPage = ({ params }: { params: { slug: string } }) => {
+  // Get the slug from the params prop
   const serviceSlug = params.slug
   const service = services.find((s) => s.slug === serviceSlug)
 
