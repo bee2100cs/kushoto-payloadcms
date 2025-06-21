@@ -1,17 +1,22 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { notFound } from 'next/navigation' // <-- Import the notFound function
+import { notFound } from 'next/navigation'
 
 import { services } from '@/components/AgencySections/Data'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+// import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ArrowRight, MessageSquare } from 'lucide-react'
 
-// And instead, type the props inline directly in the function definition:
-const ServiceDetailPage = ({ params }: { params: { slug: string } }) => {
-  // Get the slug from the params prop
-  const serviceSlug = params.slug
-  const service = services.find((s) => s.slug === serviceSlug)
+type Props = {
+  params: Promise<{
+    slug: string
+  }>
+}
+
+const ServiceDetailPage = async ({ params: paramsPromise }: Props) => {
+  const { slug } = await paramsPromise
+
+  const service = services.find((s) => s.slug === slug)
 
   if (!service) {
     notFound()
@@ -160,3 +165,9 @@ const ServiceDetailPage = ({ params }: { params: { slug: string } }) => {
 }
 
 export default ServiceDetailPage
+
+export async function generateStaticParams() {
+  return services.map((service) => ({
+    slug: service.slug,
+  }))
+}
