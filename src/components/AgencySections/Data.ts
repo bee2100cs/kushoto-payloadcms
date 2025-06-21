@@ -148,7 +148,7 @@ export const services: Service[] = [
     description:
       'Capturing the energy and key moments of your corporate functions, conferences, and celebrations with professional photography and videography.',
     imageUrl:
-      'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-services/services-image2-J06MwoCH8ZlKEImee7RgLgvPG6igmb.webp',
+      'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-services/services-image1-5Rv73t9LOY4Ys4yXF60rZqIAZPKlvS.webp',
 
     slug: 'event-coverage',
     learnMoreLink: '/services/event-coverage',
@@ -162,7 +162,7 @@ export const services: Service[] = [
     description:
       "Elevate your brand's identity with professional headshots, team photos, and on-site imagery that reflects your company culture and values.",
     imageUrl:
-      'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-services/KushotoAgency_img1-PtQcdrzYilrzqinkB3in4lX9WWyVXb.webp',
+      'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-services/kushoto_coporate_branding-W4S7KBXyI44iFUaYkFtJNSeMx9HCAd.webp',
     slug: 'corporate-branding-photography',
     learnMoreLink: '/services/corporate-branding-photography',
     fullExplanation:
@@ -175,7 +175,7 @@ export const services: Service[] = [
     description:
       'Producing high-quality commercials and TV ads that capture attention, communicate your message, and drive results.',
     imageUrl:
-      'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-services/services-image2-J06MwoCH8ZlKEImee7RgLgvPG6igmb.webp',
+      'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-services/kushoto_ads-e2IYGzJvxNxIN6frxEgeBftAHukZZN.webp',
 
     slug: 'commercial-production',
     learnMoreLink: '/services/commercial-production',
@@ -189,7 +189,7 @@ export const services: Service[] = [
     description:
       'Crafting visually striking designs that communicate your brand’s message with clarity, from logos and brochures to digital campaigns.',
     imageUrl:
-      'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-services/kushoto%20old%20man-6gJvF4MHEIKsHeg5toQH1aomHEf1BX.webp',
+      'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-services/kushoto_graphicsdesign-B9ji2knZtkUDOPSlPHKVc1UMGQvnkD.webp',
 
     slug: 'graphics-design',
     learnMoreLink: '/services/graphics-design',
@@ -203,7 +203,7 @@ export const services: Service[] = [
     description:
       'Developing clear, engaging, and professional training videos that make complex information easy to understand and retain.',
     imageUrl:
-      'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-services/KushotoAgency_img1-PtQcdrzYilrzqinkB3in4lX9WWyVXb.webp',
+      'https://g9jclz0ebr5f6zvy.public.blob.vercel-storage.com/kushoto-services/kushoto_training-QpU6PgBcPXZQA0jx9MUkzYyLQIShAv.webp',
 
     slug: 'training-educational-videos',
     learnMoreLink: '/services/training-educational-videos',
