@@ -15,7 +15,7 @@ export const AgencyData = {
     'Graphics Design',
   ],
   description:
-    'We are a full-service creative agency dedicated to \
+    'We are a full-service creative consulting agency dedicated to \
   transforming your ideas into powerful visual narratives. \
   From impactful documentaries to stunning brand photography,\
    we blend artistry with strategy to create content that connects and inspires.',

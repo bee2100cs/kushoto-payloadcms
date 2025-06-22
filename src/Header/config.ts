@@ -11,7 +11,7 @@ export const Header: GlobalConfig = {
     {
       name: 'navItems',
       type: 'blocks', // Change from 'array' to 'blocks'
-      maxRows: 6,
+      maxRows: 8,
       blocks: [
         {
           slug: 'link', // A simple top-level link
