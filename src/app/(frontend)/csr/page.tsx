@@ -11,7 +11,7 @@ const CSRPage = () => {
             Corporate Social Responsibility
           </h1>
           <p className="text-xl text-kushoto-neutralDark/80 max-w-3xl mx-auto">
-            Partnering for a better future. Learn about Kushoto's CSR initiatives and
+            Partnering for a better future. Learn about Kushoto&apos;s CSR initiatives and
             collaborations.
           </p>
         </section>
@@ -46,7 +46,8 @@ const CSRPage = () => {
               </h3>
               <p className="text-kushoto-neutralDark/70 mb-4 flex-grow">
                 Engage your team in hands-on community projects. We offer tailored volunteering
-                opportunities that align with your company's values and our community's needs.
+                opportunities that align with your company&apos;s values and our community&apos;s
+                needs.
               </p>
               <Link
                 href="/get-involved#contact"
@@ -93,7 +94,7 @@ const CSRPage = () => {
               </h3>
               <p className="text-kushoto-neutralDark/70 mb-4 flex-grow">
                 Collaborate on campaigns that raise awareness and funds for Kushoto.org while
-                aligning with your brand's marketing objectives.
+                aligning with your brand&apos;s marketing objectives.
               </p>
               <Link
                 href="/get-involved#contact"

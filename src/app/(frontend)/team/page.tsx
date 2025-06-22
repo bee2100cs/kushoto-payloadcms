@@ -40,7 +40,7 @@ const TeamPage = () => {
         <p className="text-center text-lg text-kushoto-neutralDark/70 pt-8">
           Our team is growing! Interested in joining us? Check our 
           <Link href="/get-involved" className="text-kushoto-primary font-semibold hover:underline">
-            'Get Involved'
+            &apos;Get Involved&apos;
           </Link>
            page.
         </p>

@@ -55,8 +55,8 @@ const AboutPage = () => {
             </h2>
             <p className="text-lg text-kushoto-neutralDark/90 leading-relaxed">
               Founded with a passion for grassroots change, Kushoto.org started as a small
-              initiative to connect local volunteers with community needs. Today, we've grown into a
-              network of dedicated individuals working together to build a more equitable and
+              initiative to connect local volunteers with community needs. Today, we&apos;ve grown
+              into a network of dedicated individuals working together to build a more equitable and
               sustainable future from the ground up.
             </p>
           </div>
