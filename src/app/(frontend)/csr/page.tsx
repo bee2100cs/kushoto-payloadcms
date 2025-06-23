@@ -3,6 +3,7 @@ import DonateSection from '@/components/GetInvolved/DonateSection'
 import { Button } from '@/components/ui/button'
 
 export const dynamic = 'force-dynamic'
+export const revalidate = 600
 
 const CSRPage = () => {
   return (

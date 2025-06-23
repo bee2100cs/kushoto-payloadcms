@@ -6,7 +6,7 @@ import ValueItem from '@/components/About/ValueItem'
 export const dynamic = 'force-dynamic'
 export const revalidate = 600
 
-const AboutPage = () => {
+const Page = () => {
   const values = [
     {
       icon: Users,
@@ -123,4 +123,4 @@ const AboutPage = () => {
   )
 }
 
-export default AboutPage
+export default Page

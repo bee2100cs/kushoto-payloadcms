@@ -4,8 +4,9 @@ import GalleryClient from '@/components/Gallery/GalleryClient'
 import InstagramFeed from '@/components/Gallery/InstagramFeed'
 
 export const dynamic = 'force-static'
+export const revalidate = 600
 
-const GalleryPage = () => {
+const Page = () => {
   return (
     <div className="container mx-auto px-4">
       <div className="animate-fade-in-up space-y-12 py-8 md:py-16">
@@ -51,4 +52,4 @@ const GalleryPage = () => {
   )
 }
 
-export default GalleryPage
+export default Page
