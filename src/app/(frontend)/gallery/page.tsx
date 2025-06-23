@@ -1,9 +1,9 @@
-export const dynamic = 'force-static'
-
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import GalleryClient from '@/components/Gallery/GalleryClient'
 import InstagramFeed from '@/components/Gallery/InstagramFeed'
+
+export const dynamic = 'force-static'
 
 const GalleryPage = () => {
   return (

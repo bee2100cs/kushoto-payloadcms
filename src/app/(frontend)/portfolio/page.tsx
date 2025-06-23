@@ -1,7 +1,7 @@
+import PortfolioClient from '@/components/Portfolio/PortfolioClient'
+
 // This tells Next.js to render this page as a static HTML file at build time.
 export const dynamic = 'force-static'
-
-import PortfolioClient from '@/components/Portfolio/PortfolioClient'
 
 const PortfolioPage = () => {
   return (

@@ -2,6 +2,8 @@ import Link from 'next/link'
 import DonateSection from '@/components/GetInvolved/DonateSection'
 import { Button } from '@/components/ui/button'
 
+export const dynamic = 'force-dynamic'
+
 const CSRPage = () => {
   return (
     <div className="container mx-auto px-4">

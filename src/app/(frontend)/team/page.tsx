@@ -2,6 +2,8 @@ import { teamKushoto } from '@/components/HomeSections/TeamHome'
 import TeamMemberCard from '@/components/Team/TeamMemberCard'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic'
+
 const TeamPage = () => {
   return (
     <div className="container mx-auto px-4">
