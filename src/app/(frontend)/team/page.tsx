@@ -2,7 +2,7 @@ import { teamKushoto } from '@/components/HomeSections/TeamHome'
 import TeamMemberCard from '@/components/Team/TeamMemberCard'
 import Link from 'next/link'
 
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-static'
 export const revalidate = 600
 
 const TeamPage = () => {

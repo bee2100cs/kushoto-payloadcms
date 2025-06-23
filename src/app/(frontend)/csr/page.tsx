@@ -2,7 +2,7 @@ import Link from 'next/link'
 import DonateSection from '@/components/GetInvolved/DonateSection'
 import { Button } from '@/components/ui/button'
 
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-static'
 export const revalidate = 600
 
 const CSRPage = () => {
